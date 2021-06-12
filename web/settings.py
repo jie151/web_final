@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-(-e=!s$6c-zqso$60746b9cv0givg%=v2k04idsre(5(l^ots!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -45,6 +45,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -105,9 +106,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 #whitelisting React port
-CORS_ORIGIN_WHITELIST=[
-    'http://localhost:3000',
-]   
+CORS_ORIGIN_WHITELIST=['*']   
 
 
 # Internationalization
