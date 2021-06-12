@@ -107,7 +107,9 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 #whitelisting React port
-CORS_ORIGIN_WHITELIST=['*']   
+CORS_ORIGIN_WHITELIST=[
+    'https://localhost:3000'
+]   
 
 
 # Internationalization
